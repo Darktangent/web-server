@@ -13,7 +13,7 @@ request({url:url, json:true},(error,response)=>{
   }else{
     callback(undefined,
     
-      `${summary}. It is currently ${temperature} degrees out. There is ${precipProbability}% chance of rain.`
+      `${summary}. It is currently ${temperature} degrees out. There is ${precipProbability}% chance of rain. The humidity is ${response.body.daily.data[0].humidity}`
 
     )
   }
